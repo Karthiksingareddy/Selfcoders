@@ -1,0 +1,65 @@
+<title>
+    Temp conversion
+</title><style>
+  img{
+    margin-top:20px;
+    margin-left:700px;
+    float:right;
+ }
+ .intro-title{
+    font-family: times 'Times New Roman';
+    font-size:50px;
+ }
+
+ .def-title{
+    font-family:'times new roman';
+    font-size:23px;
+ }
+
+ .convert-title{
+    font-family: 'times new roman';
+    font-size:15px;
+    text-align:center;
+ }
+</style>
+<img src="C:\Users\HP\Downloads\fahrenheit-to-celsius.png" height="200px" width="250px">
+<p class="intro-title">
+    Hi!<br>This is Karthik
+</p>
+<p class="def-title">
+    You want to know about celsius and fahrenheit, right!.<br>Let's focus on something that describes about celsius and Fahrenheit. 
+</p>
+<p>
+    <u><b>Celsius:-</b></u> Celsius, also called centigrade, scale based on 0° for the freezing point of water and 100° for the boiling point of water. Invented in 1742 by the Swedish astronomer Anders Celsius, it is sometimes called the centigrade scale because of the 100-degree interval between the defined points.
+</p>
+<p>
+    <u><b>Fahrenheit:-</b></u> Fahrenheit is a scale for measuring temperature, in which water freezes at 32 degrees and boils at 212 degrees. It is represented by the symbol °F.
+</p>
+<p class="convert-title">
+    <u><b>CONVERSION OF FAHRENHEIT TO CELSIUS</b></u>
+</p>
+<p> 
+   By using the formula (°F = °C×(9/5)+32).We can calculate.
+</p> 
+<script> function toCelsius() 
+   {
+     var fahrenheit = document.getElementById('fah').value;
+     var celsius = (fahrenheit - 32) * 5 / 9; document.getElementById('celsius').value = celsius.toFixed(2);
+     }
+    function toFahrenheit()
+      {
+    var celsius = document.getElementById('celsius').value;
+    var fahrenheit = celsius * 9 / 5 + 32;
+    document.getElementById('fah').value = fahrenheit.toFixed(2);
+      }
+     
+</script>
+<form> 
+    <label for="Fahrenheit">The temperature in fahrenheit :(The result is in second box!)</label>   
+    <input type="text" id="fah" name="fah" value="" onkeyup="toCelsius()">
+    <p>
+        It is of a vice versa... If you want conversion of celsius to fahrenheit is clear the box 1 and enter your celsius temperature in second box.
+    </p>
+    <label for="celsius">The temperature in celsius is :(The result in first box!)</label>
+    <input type="text" id="celsius" name="celsius" value="" onkeyup="toFahrenheit()"><br> 
+</form>
